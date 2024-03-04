@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "Stock.API\Stoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "Payment.API\Payment.API.csproj", "{531F3BE7-66EB-4312-A5A8-95F5E596CEDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{655A5D89-F147-46F0-9EF5-6355F1965468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{655A5D89-F147-46F0-9EF5-6355F1965468}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{AF9C5D73-2ECF-4A4C-A34D-18A0DC7FDA15}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Masaüstü\MicroservicesDesignPatternPhoto\Choreography.png = ..\..\..\Masaüstü\MicroservicesDesignPatternPhoto\Choreography.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
