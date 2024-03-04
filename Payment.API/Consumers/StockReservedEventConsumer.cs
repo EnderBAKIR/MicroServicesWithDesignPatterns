@@ -34,7 +34,7 @@ namespace Payment.API.Consumers
                 _logger.LogInformation($"{context.Message.Payment.TotalPrice} TL was not widthrawn from credit card for user id={context.Message.BuyerId}");
 
 
-                await _publisEndpoint.Publish(new PaymentFailedlEvent { BuyerId=context.Message.BuyerId, OrderId =context.Message.OrderId , Message="not enough balance" });
+                await _publisEndpoint.Publish(new PaymentFailedlEvent { BuyerId=context.Message.BuyerId, OrderId =context.Message.OrderId , Message="not enough balance" , OrderItems=context.Message.OrderItems });
             }
 
 
