@@ -1,4 +1,7 @@
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using Shared;
+using Stock.API.Consumers;
 using Stock.API.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,25 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddMassTransit(x =>
+{
+
+    x.AddConsumer<OrderCreatedEventConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(builder.Configuration.GetConnectionString("RabbitMQ"));
+
+
+        cfg.ReceiveEndpoint(RabbitMQSettingsConst.StockOrderCreatedEventQueueName , e =>
+        {
+
+            e.ConfigureConsumer<OrderCreatedEventConsumer>(context);
+        });
+    });
+});
 
 
 
