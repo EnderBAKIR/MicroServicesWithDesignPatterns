@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Shared;
-using Stock.API.Controllers;
+using Stock.API.Models;
 
 namespace Stock.API.Consumers
 {

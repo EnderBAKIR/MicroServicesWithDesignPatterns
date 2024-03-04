@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Stock.API.Controllers
+namespace Stock.API.Models
 {
     public class AppDbContext : DbContext
     {
@@ -8,6 +8,6 @@ namespace Stock.API.Controllers
         {
         }
 
-        public DbSet<Models.Stock> Stocks { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
     }
 }

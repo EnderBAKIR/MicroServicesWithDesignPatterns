@@ -2,7 +2,7 @@ using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Shared;
 using Stock.API.Consumers;
-using Stock.API.Controllers;
+using Stock.API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
