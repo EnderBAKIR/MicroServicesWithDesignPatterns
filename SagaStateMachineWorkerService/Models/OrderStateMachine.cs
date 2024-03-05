@@ -12,7 +12,7 @@ namespace SagaStateMachineWorkerService.Models
     {
         public Event<IOrderCreatedRequestEvent> OrderCreatedRequestEvent { get; set; }
 
-        public State OrderCreated { get; private set; }
+        public State OrderCreated { get; private set; } //CurrentState property
 
         public OrderStateMachine()
         {
@@ -29,9 +29,14 @@ namespace SagaStateMachineWorkerService.Models
 
                 context.Instance.CreatedDate = DateTime.Now;
 
+                //Payment
+                context.Instance.CardName = context.Data.Payment.CardName;
+
                 context.Instance.CardNumber = context.Data.Payment.CardNumber;
 
                 context.Instance.CVV = context.Data.Payment.CVV;
+
+                context.Instance.Expiration = context.Data.Payment.Expiration;
 
                 context.Instance.TotalPrice = context.Data.Payment.TotalPrice;
 
