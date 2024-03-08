@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "Payment.API\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{655A5D89-F147-46F0-9EF5-6355F1965468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaStateMachineWorkerService", "SagaStateMachineWorkerService\SagaStateMachineWorkerService.csproj", "{67E30078-2F62-441C-B4C8-7FF7862571B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaStateMachineWorkerService", "SagaStateMachineWorkerService\SagaStateMachineWorkerService.csproj", "{67E30078-2F62-441C-B4C8-7FF7862571B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

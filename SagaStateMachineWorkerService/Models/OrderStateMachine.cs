@@ -43,12 +43,12 @@ namespace SagaStateMachineWorkerService.Models
 
             })
                 .Then(context => { Console.WriteLine($"OrderCreatedRequestEvent before : {context.Instance}"); })
-                .Publish(context=> new OrderCreatedEvent(context.Instance.CorrelationId) {OrderItems = context.Data.OrderItems })
+                .Publish(context => new OrderCreatedEvent(context.Instance.CorrelationId) { OrderItems = context.Data.OrderItems })
                 .TransitionTo(OrderCreated)
                 .Then(context => { Console.WriteLine($"OrderCreatedRequestEvent after : {context.Instance}"); })
-                
-                
-                
+
+
+
                 );
         }
     }
