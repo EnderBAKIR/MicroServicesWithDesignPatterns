@@ -31,6 +31,9 @@ namespace Shared
         public const string OrderStockNotReservedEventQueueName = "order-stoc-no-reserved-queue";
 
 
+        public const string PaymentStocReservedRequestQueueName = "order-stock-reserved-request-queue";
+
+        
 
         
 
