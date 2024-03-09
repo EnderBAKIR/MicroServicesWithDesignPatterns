@@ -10,6 +10,8 @@ namespace Shared
     {
 
         public const string OrderSaga = "order-saga-queue";
+        public const string StockRollBackMessageQueueName = "stock-rollback-queue";
+
 
 
 
