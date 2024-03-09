@@ -23,7 +23,7 @@ namespace Shared
         public const string StockPaymentFailedEventQueueName = "stock-payment-failed-queue";
 
 
-        public const string OrderPaymentCompletedEventQueueName = "order-payment-completed-queue";
+        public const string OrderRequestCompletedEventQueueName = "order-request-completed-queue";
 
 
         public const string OrderPaymentFailedEventQueueName = "order-payment-failed-queue";
