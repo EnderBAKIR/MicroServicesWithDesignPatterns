@@ -99,19 +99,11 @@ namespace SagaStateMachineWorkerService.Models
                 .Publish(context => new OrderRequestFailedEvent() { OrderId = context.Instance.OrderId, Reason = context.Data.Reason })
                 .Send(new Uri($"queue:{RabbitMQSettingsConst.StockRollBackMessageQueueName}"), context=> new StockRollBackMessage() { OrderItems=context.Data.OrderItems})
                 .TransitionTo(PaymentFailed)
-                .Then(context => { Console.WriteLine($"PaymentFailedEvent after : {context.Instance}"); })
+                .Then(context => { Console.WriteLine($"PaymentFailedEvent after : {context.Instance}"); }));
 
 
 
-
-
-
-
-                );
-
-
-
-
+            SetCompletedWhenFinalized();
 
         }
     }
