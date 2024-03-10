@@ -38,17 +38,17 @@ namespace EventSourcing.API.BackgroundServices
 
 
 
-            throw new NotImplementedException();
+           
         }
 
 
 
         private async Task EventAppeeared(EventStorePersistentSubscriptionBase arg1, ResolvedEvent arg2)
         {
-            _logger.LogInformation("The Message Process ... ");
+            
 
             var type = Type.GetType($"{Encoding.UTF8.GetString(arg2.Event.Metadata)},EventSourcing.Shared");
-
+            _logger.LogInformation($"The Message Process ...: {type.ToString()} ");
 
             var eventData = Encoding.UTF8.GetString(arg2.Event.Data);
 
