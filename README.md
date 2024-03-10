@@ -7,3 +7,5 @@
 ### [Link To Access SagaOrchestration Design Pattern Branch](https://github.com/EnderBAKIR/MicroServicesWithDesignPatterns/tree/SagaOrchestrationPattern "Link To Access Sagachoreography Design Pattern Branch")
 # Event Sourcing Pattern
 ###  [ Link To Access EventSourcing Pattern Branch](https://github.com/EnderBAKIR/MicroServicesWithDesignPatterns/tree/EventSourcingPattern "# Link To Access Event Sourcing Pattern Branch")
+# Resiliency Patterns
+###  [ Link To Access Resiliency Patterns Branch](https://github.com/EnderBAKIR/MicroServicesWithDesignPatterns/tree/ResiliencyPatterns "# Link To Access Event Resilienct Patterns Branch")
