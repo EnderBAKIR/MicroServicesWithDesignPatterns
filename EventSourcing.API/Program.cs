@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddEventStore(builder.Configuration);
+builder.Services.AddSingleton<ProductStream>();
 
 
 
