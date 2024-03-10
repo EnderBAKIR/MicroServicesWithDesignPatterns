@@ -1,5 +1,4 @@
 ﻿using EventSourcing.Shared.Events;
-using EventStore.Client;
 using EventStore.ClientAPI;
 using System.Text;
 using System.Text.Json;
