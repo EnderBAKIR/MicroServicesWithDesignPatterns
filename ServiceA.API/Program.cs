@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ProductService>(opt =>
 {
     opt.BaseAddress = new Uri("https://localhost:7296/api/products/");
-}).AddPolicyHandler(GetCircuitBreakerPolicy());
+}).AddPolicyHandler(GetAdvanceCircuitBreakerPolicy());
 
 
 
@@ -51,6 +51,19 @@ IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
     });
 }
 
+IAsyncPolicy<HttpResponseMessage> GetAdvanceCircuitBreakerPolicy()
+{
+    return HttpPolicyExtensions.HandleTransientHttpError().AdvancedCircuitBreakerAsync(0.1, TimeSpan.FromSeconds(30),3,TimeSpan.FromSeconds(30), onBreak: (arg1, arg2) =>
+    {
+        Debug.WriteLine("Circiut Breaker => On Break");
+    }, onReset: () =>
+    {
+        Debug.WriteLine("Circiut Breaker => On Reset");
+    }, onHalfOpen: () =>
+    {
+        Debug.WriteLine("Circiut Breaker => On HalfOpen");
+    });
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
